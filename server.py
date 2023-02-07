@@ -8,7 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user, UserMixin
 from flask import Flask, render_template, redirect, url_for, request, flash
-from flask_gravatar import Gravatar
+# from flask_gravatar import Gravatar
 from datetime import datetime as dt
 import os
 from dotenv import load_dotenv
@@ -29,18 +29,18 @@ login_manager.login_view = 'login'
 login_manager.init_app(app)
 
 # DATABASE SETUP
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///backend/db.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-gravatar = Gravatar(app,
-                    size=100,
-                    rating='g',
-                    default='retro',
-                    force_default=False,
-                    force_lower=False,
-                    use_ssl=False,
-                    base_url=None)
+# gravatar = Gravatar(app,
+#                     size=100,
+#                     rating='g',
+#                     default='retro',
+#                     force_default=False,
+#                     force_lower=False,
+#                     use_ssl=False,
+#                     base_url=None)
 
 
 class User(UserMixin, db.Model):
