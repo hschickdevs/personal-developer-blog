@@ -76,8 +76,11 @@ class Comment(db.Model):
     date = db.Column(db.String(250), nullable=False)
     post = db.Column(db.Integer, db.ForeignKey('blogpost.id'), nullable=False)
     author = db.Column(db.String(250), db.ForeignKey('user.username'), nullable=False)
-
-
+    
+@app.before_first_request
+def create_tables():
+    db.create_all()
+    
 def load_posts(id: int = None):
     if id is None:
         return BlogPost.query.order_by(BlogPost.id.desc()).all()
