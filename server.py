@@ -117,7 +117,7 @@ def load_user(username):
     return User.query.get(str(username))
 
 # CREATE ALL TABLES AUTOMATICALLY - WARNING - THIS WILL DELETE ALL DATA IN THE DATABASE
-db.create_all()
+# db.create_all()
 
 # APP ROUTES
 @app.route('/')
