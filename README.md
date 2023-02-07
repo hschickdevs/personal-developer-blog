@@ -1,8 +1,10 @@
 # Harrison's Developer Blog
 
-I created a personal developer blog using Flask, Jinja, and Bootstrap. This website is a refactor of a bootstrap template in order to run on a Flask Webapp. The point of the blog would be to post articles about my career progression and projects as a software developer. 
+I created a personal developer blog using Flask, Jinja, and Bootstrap. This website is a refactor of a bootstrap template in order to run on a Flask Webapp. The point of the blog would be to post articles about my career progression and projects as a software developer. I've created a few sample posts and comments to demonstrate the would-be functionality of the website.
 
 Articles, users, and comments are stored on a local sqlite database, and retreived using Flask-SQLAlchemy.
+
+I used gunicorn to deploy the webapp to Heroku for testing, but the app is currently not deployed to a live server.
 
 📚 **Tech Stack**:
 - HTML, Jinja

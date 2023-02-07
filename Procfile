@@ -1,0 +1,1 @@
+web: gunicorn Harrisons-Blog/server:app
