@@ -21,3 +21,4 @@ python-dotenv
 flask-login
 Flask-Gravatar
 gunicorn>=20.1.0
+sendgrid

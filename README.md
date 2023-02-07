@@ -35,8 +35,6 @@ ___
     git clone <project_url>
     
     cd <project_directory>
-
-    cd /Harrisons-Blog
     ```
 
 2. Install the package requirements:
@@ -79,4 +77,4 @@ ___
 
 ## Website Demo:
 
-![Website Demo](./demo.gif)
+![Website Demo](./static/assets/img/demo.gif)
