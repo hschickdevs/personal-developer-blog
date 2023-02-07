@@ -32,6 +32,7 @@ login_manager.init_app(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+db.app = app
 
 # gravatar = Gravatar(app,
 #                     size=100,
@@ -291,5 +292,5 @@ def error():
     return render_template('error.html')
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+    # app.run(debug=True)
