@@ -29,7 +29,7 @@ login_manager.login_view = 'login'
 login_manager.init_app(app)
 
 # DATABASE SETUP
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///backend/db.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 db.app = app
