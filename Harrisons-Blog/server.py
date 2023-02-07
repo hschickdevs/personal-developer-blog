@@ -182,10 +182,10 @@ def edit_post(p_id: int):
     form = CreatePostForm(data=MultiDict(post.__dict__))
 
     if form.validate_on_submit():
+        # Post from database:        
         post.title = form.title.data
         post.subtitle = form.subtitle.data
         post.body = form.body.data
-        post.author = form.author.data
         post.img_url = form.img_url.data
         db.session.commit()
 

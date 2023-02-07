@@ -1,15 +1,14 @@
 # Harrison's Developer Blog
 
-This unfinished-website is a refactor of a bootstrap template in order to run on a Flask Webapp.
+I created a personal developer blog using Flask, Jinja, and Bootstrap. This website is a refactor of a bootstrap template in order to run on a Flask Webapp. The point of the blog would be to post articles about my career progression and projects as a software developer. 
 
-Articles are stored on a local sqlite database.
+Articles, users, and comments are stored on a local sqlite database, and retreived using Flask-SQLAlchemy.
 
 📚 **Tech Stack**:
-- HTML, CSS, JS
+- HTML, Jinja
+- CSS, Bootstrap
 - Flask
-- Jinja
 - Sqlite / SQLAlchemy
-- Bootstrap
 
 🧰 **Full CRUD operation**:
 1. Create blog posts & comments 
@@ -19,14 +18,24 @@ Articles are stored on a local sqlite database.
 
 🔐 **User Sessions & Auth with Flask**:
 - Login and Logout
+- Recognize administrator user
 - Protect routes from unauthorized users
 - View blog posts and post comments by user
 
 ___
 
-## How to Run the Webapp:
+## How to Run the Webapp Locally:
 
-1. Navigate to the days051-060/day059/Harrisons-Blog directory in your terminal.
+### Installation and Setup
+
+1. Clone the repository, and navigate to the webapp's directory:
+    ```bash
+    git clone <project_url>
+    
+    cd <project_directory>
+
+    cd /Harrisons-Blog
+    ```
 
 2. Install the package requirements:
     ```
@@ -37,6 +46,33 @@ ___
     ```
     python3 server.py
     ```
+
+### Admin Login
+
+1. Using the site header, navigate to the `Login` page.
+
+2. Login with the following credentials:
+    ```
+    username: admin
+    password: testpass
+    ```
+
+3. You now have the ability to create, edit, and delete blog posts.
+
+### User Login:
+
+1. Using the site header, navigate to the `Login` page.
+
+2. Login with the following credentials:
+    ```
+    username: user2
+    password: testpass
+    ```
+
+3. You can now view the site of a regular user without admin privelages.
+    - You can post comments
+    - You can view posts, even when logged out.
+
 ___
 
 ## Website Demo:
